@@ -76,8 +76,11 @@ function App() {
         <p>
           {myResultState.map((user, index) => (
           <div key={index}>
-            <span><strong>Orario di riferimento</strong>: {user.dt_txt}</span>
-            <span><strong> Temperatura</strong>: {(user.main.temp - 273.15).toFixed(2)} °C</span>
+              <span><strong>Orario di riferimento</strong>: {user.dt_txt}</span><br></br>
+            <span><strong> Temp. prevista</strong>: {(user.main.temp - 273.15).toFixed(2)} °C</span><br></br>
+            <span><strong> Percepita come</strong>: {(user.main.feels_like - 273.15).toFixed(2)} °C</span><br></br>
+            <span><strong> Umidità</strong>: {(user.main.humidity)} %</span><br></br>
+              <br></br><br></br>
           </div>
           ))}
         </p>
